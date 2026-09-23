@@ -1,395 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Jazz Night 2026</title>
-
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            background-color: #eeeeee;
-            font-family: Arial, Helvetica, sans-serif;
-            color: #222;
-        }
-
-        /* 整個頁面的主要區域 */
-        .page {
-            width: 92%;
-            max-width: 1350px;
-            margin: 35px auto;
-            background-color: white;
-            min-height: 1000px;
-            padding: 0 35px 40px 35px;
-        }
-
-        /* 上方活動區域 */
-        .hero {
-            background-color: #faf7f1;
-            padding: 40px 30px 25px 30px;
-        }
-
-        .hero-content {
-            display: flex;
-            gap: 40px;
-            align-items: flex-start;
-        }
-
-        .event-info {
-            flex: 1;
-        }
-
-        .event-info h1 {
-            margin: 0 0 25px 0;
-            color: darkred;
-            font-size: 36px;
-            font-weight: bold;
-        }
-
-        .subtitle {
-            font-size: 21px;
-            font-style: italic;
-            margin-bottom: 22px;
-        }
-
-        .date {
-            color: darkred;
-            font-weight: bold;
-            font-size: 20px;
-            margin-bottom: 3px;
-        }
-
-        .time {
-            font-size: 18px;
-            margin-bottom: 22px;
-        }
-
-        /* 圖片 */
-        .event-image {
-            width: 350px;
-            height: 235px;
-            object-fit: cover;
-            display: block;
-        }
-
-        /* 右側 HTML 標籤示意 */
-        .code-preview {
-            width: 300px;
-            padding-top: 55px;
-            font-family: "Courier New", monospace;
-            font-size: 38px;
-            line-height: 1.55;
-            color: #000;
-            white-space: nowrap;
-        }
-
-        /* 各個區塊 */
-        .section {
-            margin-top: 0;
-        }
-
-        .section-title {
-            margin: 0;
-            padding: 7px 0 6px 0;
-            background-color: #ead8bd;
-            color: darkred;
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .section-content {
-            padding: 22px 0;
-            background-color: #faf7f1;
-        }
-
-        .section-content p {
-            margin: 0 0 18px 0;
-            font-size: 18px;
-            line-height: 1.5;
-        }
-
-        .red-bold {
-            color: darkred;
-            font-weight: bold;
-        }
-
-        /* 價格 */
-        .old-price {
-            color: #888;
-            text-decoration: line-through;
-        }
-
-        .special-price {
-            color: darkred;
-            font-weight: bold;
-            font-size: 19px;
-        }
-
-        /* 時間修改效果 */
-        .old-time {
-            color: red;
-            text-decoration: line-through;
-        }
-
-        .new-time {
-            color: green;
-            text-decoration: underline;
-        }
-
-        /* More Information */
-        .links {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-            font-size: 18px;
-        }
-
-        /*
-         * 連結狀態
-         * link    = 尚未造訪
-         * visited = 已造訪
-         * active  = 正在點擊
-         */
-        .links a:link {
-            color: blue;
-            text-decoration: underline;
-        }
-
-        .links a:visited {
-            color: #777;
-            text-decoration: underline;
-        }
-
-        .links a:hover {
-            color: #0055cc;
-        }
-
-        .links a:active {
-            color: hotpink;
-            background-color: yellow;
-        }
-
-        /* Contact */
-        .contact {
-            background-color: #fffbe0;
-            padding: 20px 0;
-            font-size: 18px;
-        }
-
-        .contact-name {
-            font-style: italic;
-        }
-
-        .email {
-            color: blue;
-            text-decoration: underline;
-        }
-
-        /* 右上角 RESULT */
-        .result {
-            position: absolute;
-            right: 0;
-            top: 72px;
-            background-color: #4b4b4b;
-            color: white;
-            padding: 18px 30px;
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .wrapper {
-            position: relative;
-        }
-
-        /* 小螢幕 */
-        @media (max-width: 900px) {
-
-            .hero-content {
-                flex-direction: column;
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>滷肉飯狂歡派對</title>
+        
+        <style>
+            body {
+                background-color: #fdf5e6; 
+                font-family: '微軟正黑體', Arial, sans-serif;
+                color: #333;
+                margin: 0;
             }
-
-            .code-preview {
+            div.row {
+                display: flex;
+            }
+            .title {
                 width: 100%;
-                padding-top: 0;
-                font-size: 28px;
+                text-align: center;
+                background-color: #8b4513; 
+                color: white;
+                padding: 20px 0;
             }
-
-            .event-image {
-                width: 100%;
-                max-width: 450px;
-                height: auto;
+            .box {
+                width: 50%;
+                padding: 30px;
+                box-sizing: border-box; 
+                border: 2px solid #5c3a21;
             }
-
-            .result {
-                position: static;
-                display: inline-block;
-                margin-bottom: 10px;
+            .img {
+                text-align: center;
+                background-color: #2b170a;
+                padding: 30px 0;
             }
-        }
-    </style>
-</head>
+            
+            .box-about { background-color: #ffdead; } 
+            .box-highlights { background-color: #f4a460; } 
+            .box-program { background-color: #cd853f; color: white;} 
+            .box-tickets { background-color: #d2691e; color: white;} 
 
-<body>
-
-<div class="wrapper">
-
-    <!-- 右上角 RESULT -->
-    <div class="result">
-        RESULT
-    </div>
-
-    <main class="page">
-
-        <!-- =========================
-             活動介紹
-        ========================== -->
-        <section class="hero">
-
-            <div class="hero-content">
-
-                <div class="event-info">
-
-                    <h1>JAZZ NIGHT 2026</h1>
-
-                    <div class="subtitle">
-                        Live Music &amp; Dance
-                    </div>
-
-                    <div class="date">
-                        Saturday, October 10, 2026
-                    </div>
-
-                    <div class="time">
-                        7:30 PM – 10:30 PM
-                    </div>
-
-                    <!-- 爵士樂圖片 -->
-                     <a href="https://example.com">
-                        <img
-                            class="event-image"
-                            alt="Jazz musicians performing"
-                            src="https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&w=700&q=80"
-                        >
-                    </a>
-
-                </div>
-
-                <!-- 截圖右側的 HTML 標籤 -->
-
+            a:link { color: #ffeb3b; text-decoration: none; }
+            a:visited { color: #fbc02d; text-decoration: none; }
+            a:hover { color: #ff5722; text-decoration: underline; font-weight: bold; }
+            a:active { color: #d84315; text-decoration: underline; }
+            
+            .footer-link:link, .footer-link:visited { color: #ffdead; }
+            .footer-link:hover, .footer-link:active { color: #fff; }
+        </style>
+    </head>
+    <body>
+        <!-- Header 區塊 -->
+        <div class="title">
+            <h1>滷肉飯狂歡派對 (Lu Rou Fan Party)</h1>
+            <p>最地道的台灣味，大口吃肉大口扒飯！</p>
+            <p>2026年10月10日 | 晚上 6:00 - 9:00 | 台北市大安區</p>
+        </div>
+        
+        <!-- 大圖片區塊 (可點擊) -->
+        <div class="img">
+            <a href="https://zh.wikipedia.org/zh-tw/%E6%BB%B7%E8%82%89%E9%A3%AF" target="_blank">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2V_xHn90CvojQZ3pEKYpNXa629fuVi-hfGANKsTp-eQ&s=10" style="width: 500px; height: auto; display: inline-block; border: 5px solid white; border-radius: 10px;" alt="美味的滷肉飯">
+            </a>
+            <p style="color: #aaa; font-size: 14px;">點擊圖片了解滷肉飯維基百科</p>
+        </div>
+        
+        <!-- 2x2 佈局: 第一排 -->
+        <div class="row">
+            <div class="box box-about">
+                <h2>關於派對 (About the Party)</h2>
+                <p>歡迎來到 <b>滷肉飯狂歡派對</b>！這是一個專屬於台灣國民美食的夜晚。</p>
+                <p>我們準備了特製的秘方滷汁、嚴選台灣好米，邀請所有熱愛滷肉飯的朋友一起來同樂。今晚不用顧慮熱量，準備好你的胃了嗎？</p>
             </div>
-
-        </section>
-
-
-        <!-- =========================
-             About the Event
-        ========================== -->
-        <section class="section">
-
-            <h2 class="section-title">
-                About the Event
-            </h2>
-
-            <div class="section-content">
-
-                <p>
-                    Join us for an evening of
-                    <span class="red-bold">live jazz, dancing, and good music.</span>
-                </p>
-
-                <p>
-                    Ticket:
-                    <span class="old-price">$30</span>
-                    <br>
-
-                    <span class="special-price">
-                        Special Price: $20
-                    </span>
-                </p>
-
-                <p>
-                    We originally planned to start at
-                    <span class="old-time">8:00 PM</span>
-                    <span class="new-time">7:30 PM</span>.
-                </p>
-
+            <div class="box box-highlights">
+                <h2>派對亮點 (Party Highlights)</h2>
+                <h3>祖傳秘方滷汁</h3>
+                <p>慢火熬煮 24 小時，肥瘦相間的完美比例，保證黏唇。</p>
+                <h3>無限加飯加滷汁</h3>
+                <p>白飯、滷汁無限量供應，讓你吃到飽為止！</p>
+                <h3>Dress Code</h3>
+                <p>請穿著寬鬆舒適的衣服（建議褲頭有彈性），方便大吃特吃。</p>
             </div>
-
-        </section>
-
-
-        <!-- =========================
-             More Information
-        ========================== -->
-        <section class="section">
-
-            <h2 class="section-title">
-                More Information
-            </h2>
-
-            <div class="section-content">
-
-                <div class="links">
-
-                    <a href="https://example.com">
-                        Visit our website
-                    </a>
-
-                    <a href="mailto:jazznight@example.com">
-                        Email us
-                    </a>
-
-                    <a href="tel:+886212345678">
-                        Call us
-                    </a>
-
-                </div>
-
+        </div>
+        
+        <!-- 2x2 佈局: 第二排 -->
+        <div class="row">
+            <div class="box box-program">
+                <h2>活動流程 (Tonight's Program)</h2>
+                <p><strong>時間更新：</strong> <del>6:00 PM 開放入場</del> &rarr; <ins>5:30 PM 提早開放入場</ins></p>
+                <p>6:00 PM - 派對開始，開鍋扒飯！</p>
+                <p>7:30 PM - 滷肉飯大胃王挑戰賽</p>
+                <p>8:30 PM - 頒獎典禮與甜點時間 (古早味粉圓冰)</p>
             </div>
-
-        </section>
-
-
-        <!-- =========================
-             Contact
-        ========================== -->
-        <section class="section">
-
-            <h2 class="section-title">
-                Contact
-            </h2>
-
-            <div class="contact">
-
-                <div class="contact-name">
-                    Jazz Night Taipei
-                </div>
-
-                <div>
-                    123 Music Street, Taipei
-                </div>
-
-                <div>
-                    <a
-                        class="email"
-                        href="mailto:jazznight@example.com"
-                    >
-                        jazznight@example.com
-                    </a>
-                </div>
-
+            <div class="box box-tickets">
+                <h2>票價資訊 (Tickets)</h2>
+                <h3>早鳥票: NT$150</h3>
+                <p><em>一般票: NT$250</em> (原價)</p>
+                <p>你的門票包含：</p>
+                <ul>
+                    <li>無限量滷肉飯吃到飽</li>
+                    <li>台式經典小菜任選三樣</li>
+                    <li>特調解膩冬瓜茶一杯</li>
+                </ul>
+                <p>名額有限，<a href="#">點此立刻預約你的碗筷！</a></p>
             </div>
-
-        </section>
-
-    </main>
-
-</div>
-
-</body>
+        </div>
+        
+        <!-- Contact Us 區塊 -->
+        <div class="title" style="padding: 40px 0;">
+            <h2>聯絡我們 (Contact Us)</h2>
+            <p>大安區吃貨俱樂部 (Da'an Foodie Club)</p>
+            <p>台北市大安區美食路 101 號</p>
+            <p>
+                <a href="mailto:hello@luroufan.example.com" class="footer-link">hello@luroufan.example.com</a> | 
+                <a href="tel:+886212345678" class="footer-link">+886-2-1234-5678</a>
+            </p>
+        </div>
+    </body>
 </html>
